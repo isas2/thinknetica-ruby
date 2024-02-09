@@ -1,2 +1,2 @@
 # thinknetica-ruby
-Материалы по курсу RoR
+Материалы по курсу Ruby on Rails
