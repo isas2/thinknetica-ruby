@@ -21,6 +21,8 @@ train4 = PassangerTrain.new('107С')
 [train1, train2, train3, train4].each do |train|
   station.take(train)
 end
+
+puts "Station all count: #{Station.instances}"
 puts "Поиск поезда 123А: '#{Train.find('123А')}'"
 
 # тест отправления поезда
@@ -52,6 +54,9 @@ train1.set_route(route2)
 while train1.go_ahead do
 end
 
-# puts "Trains: #{Train.instances}"
-# puts "Routes: #{Route.instances}"
-# puts "Station: #{Station.instances}"
+puts
+puts "Trains: #{Train.instances}"
+puts "PassangerTrain: #{PassangerTrain.instances}"
+puts "CargoTrain: #{CargoTrain.instances}"
+puts "Routes: #{Route.instances}"
+puts "Station: #{Station.instances}"

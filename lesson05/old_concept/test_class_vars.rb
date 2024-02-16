@@ -2,13 +2,11 @@ module InstanceCounter
   def self.included(base)
     base.extend ClassMethods
     base.include InstanceMethods
-    #base.class_eval %(@all = [])
-    base.send :init
+    base.class_eval %(@all = [])
   end
 
   module ClassMethods
     def all
-      #@all
       @all.clone
     end
 
@@ -17,29 +15,14 @@ module InstanceCounter
     end
 
     def inherited(subclass)
-      instance_var = "@all"
-      subclass.instance_variable_set(instance_var, instance_variable_get(instance_var))
-    end
-
-    protected
-    
-    def init
-      @all = []
-    end
-
-    def add(obj)
-      @all << obj
-    end
-
-    def delete(obj)
-      @all.delete(obj)
+      subclass.instance_variable_set("@all", instance_variable_get("@all"))
     end
   end
 
   module InstanceMethods
     protected
     def register_instance(obj)
-      self.class.send :add, obj
+      self.class.instance_variable_get("@all") << obj
     end
   end
 end
@@ -76,7 +59,7 @@ def debug(cl)
 end
 
 a = A.new
-A.all << a
+A.all << a  # потенциально опасная ситуация
 B.new
 B.new
 C.new
