@@ -2,6 +2,8 @@
 Тестирование работы объектов.
 =end
 
+require_relative 'lib/producer'
+require_relative 'lib/instance_counter'
 require_relative 'lib/train'
 require_relative 'lib/carriage'
 Dir['lib/*.rb'].each { |file| require_relative file }
@@ -11,14 +13,15 @@ station = Station.new('Новая')
 train1 = CargoTrain.new('28А')
 43.times { |i| train1.attach(CargoCarriage.new("ВА01#{i}"))}
 train2 = PassangerTrain.new('602Ч')
-12.times { |i| train2.attach(PassangerTrain.new("ТА032#{i}"))}
+12.times { |i| train2.attach(PassangerCarriage.new("ТА032#{i}"))}
 train3 = CargoTrain.new('123А')
 55.times { |i| train3.attach(CargoCarriage.new("ВБ02#{i}"))}
 train4 = PassangerTrain.new('107С')
-10.times { |i| train4.attach(PassangerTrain.new("ТД037#{i}"))}
+10.times { |i| train4.attach(PassangerCarriage.new("ТД037#{i}"))}
 [train1, train2, train3, train4].each do |train|
   station.take(train)
 end
+puts "Поиск поезда 123А: '#{Train.find('123А')}'"
 
 # тест отправления поезда
 puts "\nПассажирские поезда на станции:"
@@ -49,4 +52,6 @@ train1.set_route(route2)
 while train1.go_ahead do
 end
 
-puts Train.methods
+# puts "Trains: #{Train.instances}"
+# puts "Routes: #{Route.instances}"
+# puts "Station: #{Station.instances}"
