@@ -1,0 +1,631 @@
+Inspecting 13 files
+CCCWWCCWCCCFW
+
+Offenses:
+
+lib/cargo_carriage.rb:1:1: C: Style/Documentation: Missing top-level documentation comment for class CargoCarriage.
+class CargoCarriage < Carriage
+^^^^^^^^^^^^^^^^^^^
+lib/cargo_carriage.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class CargoCarriage < Carriage
+^
+lib/cargo_carriage.rb:10:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+end
+   
+lib/cargo_train.rb:1:1: C: Style/Documentation: Missing top-level documentation comment for class CargoTrain.
+class CargoTrain < Train
+^^^^^^^^^^^^^^^^
+lib/cargo_train.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class CargoTrain < Train
+^
+lib/cargo_train.rb:6:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+end
+   
+lib/carriage.rb:1:1: C: Style/Documentation: Missing top-level documentation comment for class Carriage.
+class Carriage
+^^^^^^^^^^^^^^
+lib/carriage.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class Carriage
+^
+lib/carriage.rb:4:19: C: [Correctable] Style/MutableConstant: Freeze mutable objects assigned to constants.
+  NUMBER_FORMAT = /^[а-я]{2}\d{5}$/i
+                  ^^^^^^^^^^^^^^^^^^
+lib/carriage.rb:10:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    raise "Номер вагона несоответствует устновленному формату." if !valid_number?
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/carriage.rb:10:5: C: [Correctable] Style/NegatedIf: Favor unless over if for negative conditions.
+    raise "Номер вагона несоответствует устновленному формату." if !valid_number?
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/carriage.rb:10:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    raise "Номер вагона несоответствует устновленному формату." if !valid_number?
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/carriage.rb:12:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    raise "Некорректный тип или значение вместимости вагона." if !valid_capacity?
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/carriage.rb:12:5: C: [Correctable] Style/NegatedIf: Favor unless over if for negative conditions.
+    raise "Некорректный тип или значение вместимости вагона." if !valid_capacity?
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/carriage.rb:12:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    raise "Некорректный тип или значение вместимости вагона." if !valid_capacity?
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/carriage.rb:33:21: C: [Correctable] Style/Sample: Use sample(2) instead of shuffle[0, 2].
+    ('а'..'я').to_a.shuffle[0, 2].join + ('0'..'9').to_a.shuffle[0, 5].join
+                    ^^^^^^^^^^^^^
+lib/carriage.rb:33:58: C: [Correctable] Style/Sample: Use sample(5) instead of shuffle[0, 5].
+    ('а'..'я').to_a.shuffle[0, 2].join + ('0'..'9').to_a.shuffle[0, 5].join
+                                                         ^^^^^^^^^^^^^
+lib/carriage.rb:43:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    raise "Превышена вместимость вагона" if @volume + value > @capacity
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/carriage.rb:43:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    raise "Превышена вместимость вагона" if @volume + value > @capacity
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/carriage.rb:46:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+end
+   
+lib/instance_counter.rb:1:1: C: Style/Documentation: Missing top-level documentation comment for module InstanceCounter.
+module InstanceCounter
+^^^^^^^^^^^^^^^^^^^^^^
+lib/instance_counter.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+module InstanceCounter
+^
+lib/instance_counter.rb:5:5: C: [Correctable] Style/EvalWithLocation: Pass __FILE__ and __LINE__ to class_eval.
+    base.class_eval %(@all = [])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/instance_counter.rb:8:3: C: Style/Documentation: Missing top-level documentation comment for module InstanceCounter::ClassMethods.
+  module ClassMethods
+  ^^^^^^^^^^^^^^^^^^^
+lib/instance_counter.rb:17:5: W: Lint/MissingSuper: Call super to invoke callback defined in the parent class.
+    def inherited(subclass) ...
+    ^^^^^^^^^^^^^^^^^^^^^^^
+lib/instance_counter.rb:18:38: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      subclass.instance_variable_set("@all", instance_variable_get("@all"))
+                                     ^^^^^^
+lib/instance_counter.rb:18:68: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      subclass.instance_variable_set("@all", instance_variable_get("@all"))
+                                                                   ^^^^^^
+lib/instance_counter.rb:22:3: C: Style/Documentation: Missing top-level documentation comment for module InstanceCounter::InstanceMethods.
+  module InstanceMethods
+  ^^^^^^^^^^^^^^^^^^^^^^
+lib/instance_counter.rb:23:5: C: [Correctable] Layout/EmptyLinesAroundAccessModifier: Keep a blank line after protected.
+    protected
+    ^^^^^^^^^
+lib/instance_counter.rb:25:40: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      self.class.instance_variable_get("@all") << obj
+                                       ^^^^^^
+lib/instance_counter.rb:28:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+end
+   
+lib/methods.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+def get_numeric(amount, words)
+^
+lib/methods.rb:2:3: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+  return "#{amount} #{words[2]}" if amount.between?(10, 20)
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:5:5: C: [Correctable] Style/RedundantReturn: Redundant return detected.
+    return "#{amount} #{words[0]}"
+    ^^^^^^
+lib/methods.rb:7:5: C: [Correctable] Style/RedundantReturn: Redundant return detected.
+    return "#{amount} #{words[1]}"
+    ^^^^^^
+lib/methods.rb:9:5: C: [Correctable] Style/RedundantReturn: Redundant return detected.
+    return "#{amount} #{words[2]}"
+    ^^^^^^
+lib/methods.rb:13:9: C: Naming/AsciiIdentifiers: Use only ascii symbols in identifiers.
+def get_сarriage_num(amount)
+        ^
+lib/methods.rb:13:22: W: [Correctable] Lint/UnusedMethodArgument: Unused method argument - amount. If it's necessary, use _ or _amount as an argument name to indicate that it won't be used. If it's unnecessary, remove it. You can also write as get_сarriage_num(*) if you want the method to accept any arguments but don't care about them.
+def get_сarriage_num(amount)
+                     ^^^^^^
+lib/methods.rb:14:15: C: [Correctable] Style/RedundantSelf: Redundant self detected.
+  get_numeric(self.length, ['вагон', 'вагона', 'вагонов'])
+              ^^^^
+lib/methods.rb:14:28: C: [Correctable] Style/WordArray: Use %w or %W for an array of words.
+  get_numeric(self.length, ['вагон', 'вагона', 'вагонов'])
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:22:1: C: Metrics/AbcSize: Assignment Branch Condition size for init_data is too high. [<14, 52, 3> 53.94/17]
+def init_data ...
+^^^^^^^^^^^^^
+lib/methods.rb:22:1: C: Metrics/MethodLength: Method has too many lines. [18/10]
+def init_data ...
+^^^^^^^^^^^^^
+lib/methods.rb:24:11: C: [Correctable] Style/WordArray: Use %w or %W for an array of words.
+  names = ['Чита', 'Новая', 'Маккавеево', 'Дарасун', 'Карымская', 'Ага', 'Могойтуй', 'Ясная', 'Борзя', 'Забайкальск']
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:28:25: W: [Correctable] Lint/UnusedBlockArgument: Unused block argument - i. You can omit the argument if you don't care about it.
+  rand(20..30).times { |i| train1.attach(CargoCarriage.new(Carriage.random_number, [77, 88, 132, 138].sample))}
+                        ^
+lib/methods.rb:28:111: C: [Correctable] Layout/SpaceInsideBlockBraces: Space missing inside }.
+  rand(20..30).times { |i| train1.attach(CargoCarriage.new(Carriage.random_number, [77, 88, 132, 138].sample))}
+                                                                                                              ^
+lib/methods.rb:30:25: W: [Correctable] Lint/UnusedBlockArgument: Unused block argument - i. You can omit the argument if you don't care about it.
+  rand(20..30).times { |i| train2.attach(CargoCarriage.new(Carriage.random_number, [77, 88, 132, 138].sample))}
+                        ^
+lib/methods.rb:30:111: C: [Correctable] Layout/SpaceInsideBlockBraces: Space missing inside }.
+  rand(20..30).times { |i| train2.attach(CargoCarriage.new(Carriage.random_number, [77, 88, 132, 138].sample))}
+                                                                                                              ^
+lib/methods.rb:32:23: W: [Correctable] Lint/UnusedBlockArgument: Unused block argument - i. You can omit the argument if you don't care about it.
+  rand(4..8).times { |i| train3.attach(PassangerCarriage.new(Carriage.random_number, [54, 81, 105].sample))}
+                      ^
+lib/methods.rb:32:108: C: [Correctable] Layout/SpaceInsideBlockBraces: Space missing inside }.
+  rand(4..8).times { |i| train3.attach(PassangerCarriage.new(Carriage.random_number, [54, 81, 105].sample))}
+                                                                                                           ^
+lib/methods.rb:34:24: W: [Correctable] Lint/UnusedBlockArgument: Unused block argument - i. You can omit the argument if you don't care about it.
+  rand(8..16).times { |i| train4.attach(PassangerCarriage.new(Carriage.random_number, [16, 18, 36, 54, 81].sample))}
+                       ^
+lib/methods.rb:34:116: C: [Correctable] Layout/SpaceInsideBlockBraces: Space missing inside }.
+  rand(8..16).times { |i| train4.attach(PassangerCarriage.new(Carriage.random_number, [16, 18, 36, 54, 81].sample))}
+                                                                                                                   ^
+lib/methods.rb:48:10: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  system("clear") || system("cls")
+         ^^^^^^^
+lib/methods.rb:48:29: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  system("clear") || system("cls")
+                            ^^^^^
+lib/methods.rb:53:1: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+lib/methods.rb:56:6: C: [Correctable] Style/NumericPredicate: Use list.length.positive? instead of list.length > 0.
+  if list.length > 0
+     ^^^^^^^^^^^^^^^
+lib/methods.rb:56:6: C: [Correctable] Style/ZeroLengthPredicate: Use !empty? instead of length > 0.
+  if list.length > 0
+     ^^^^^^^^^^^^^^^
+lib/methods.rb:58:75: C: [Correctable] Layout/SpaceInsideBlockBraces: Space missing inside }.
+    list.each_with_index { |o, i| puts "#{i + 1}. #{upcase_first(o.to_s)}"}
+                                                                          ^
+lib/methods.rb:86:3: C: [Correctable] Style/GuardClause: Use a guard clause (return unless station) instead of wrapping the code inside a conditional expression.
+  if station
+  ^^
+lib/methods.rb:91:46: C: [Correctable] Layout/SpaceAroundOperators: Surrounding space missing for operator +.
+    station.do_with_trains { |t, i| puts "#{i+1}. #{t.number}, #{Train.types[t.type]}, вагонов: #{t.length}"}
+                                             ^
+lib/methods.rb:91:109: C: [Correctable] Layout/SpaceInsideBlockBraces: Space missing inside }.
+    station.do_with_trains { |t, i| puts "#{i+1}. #{t.number}, #{Train.types[t.type]}, вагонов: #{t.length}"}
+                                                                                                            ^
+lib/methods.rb:97:3: C: [Correctable] Style/GuardClause: Use a guard clause (return unless train) instead of wrapping the code inside a conditional expression.
+  if train 
+  ^^
+lib/methods.rb:97:11: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+  if train 
+          ^
+lib/methods.rb:100:47: C: [Correctable] Layout/SpaceAroundOperators: Surrounding space missing for operator +.
+    train.do_with_carriages { |c, i| puts "#{i+1}. #{c.number}, #{Carriage.types[c.type]}, свободно: #{c.free_volume}, занято: #{c.volume}"}
+                                              ^
+lib/methods.rb:100:121: C: [Correctable] Layout/LineLength: Line is too long. [140/120]
+    train.do_with_carriages { |c, i| puts "#{i+1}. #{c.number}, #{Carriage.types[c.type]}, свободно: #{c.free_volume}, занято: #{c.volume}"}
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:100:140: C: [Correctable] Layout/SpaceInsideBlockBraces: Space missing inside }.
+    train.do_with_carriages { |c, i| puts "#{i+1}. #{c.number}, #{Carriage.types[c.type]}, свободно: #{c.free_volume}, занято: #{c.volume}"}
+                                                                                                                                           ^
+lib/methods.rb:104:1: C: Metrics/AbcSize: Assignment Branch Condition size for get_object is too high. [<2, 25, 3> 25.26/17]
+def get_object(list, title) ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:104:1: C: Metrics/MethodLength: Method has too many lines. [12/10]
+def get_object(list, title) ...
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:107:3: C: [Correctable] Style/GuardClause: Use a guard clause (return unless list.length > 0) instead of wrapping the code inside a conditional expression.
+  if list.length > 0
+  ^^
+lib/methods.rb:107:6: C: [Correctable] Style/NumericPredicate: Use list.length.positive? instead of list.length > 0.
+  if list.length > 0
+     ^^^^^^^^^^^^^^^
+lib/methods.rb:107:6: C: [Correctable] Style/ZeroLengthPredicate: Use !empty? instead of length > 0.
+  if list.length > 0
+     ^^^^^^^^^^^^^^^
+lib/methods.rb:110:5: C: [Correctable] Style/NegatedWhile: Favor until over while for negative conditions.
+    while !index.between?(1, list.length) ...
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:120:5: C: Naming/AccessorMethodName: Do not prefix reader method names with get_.
+def get_station
+    ^^^^^^^^^^^
+lib/methods.rb:121:27: C: [Correctable] Style/WordArray: Use %w or %W for an array of words.
+  get_object(Station.all, ['станции', 'станций'])
+                          ^^^^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:124:5: C: Naming/AccessorMethodName: Do not prefix reader method names with get_.
+def get_train
+    ^^^^^^^^^
+lib/methods.rb:125:25: C: [Correctable] Style/WordArray: Use %w or %W for an array of words.
+  get_object(Train.all, ['поезда', 'поездов'])
+                        ^^^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:128:5: C: Naming/AccessorMethodName: Do not prefix reader method names with get_.
+def get_train_type
+    ^^^^^^^^^^^^^^
+lib/methods.rb:129:37: C: [Correctable] Style/SymbolProc: Pass &:capitalize as an argument to map instead of a block.
+  get_object(Train.types.values.map { |t| t.capitalize }, ['типа поезда', 'типов поездов'])
+                                    ^^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:132:5: C: Naming/AccessorMethodName: Do not prefix reader method names with get_.
+def get_route
+    ^^^^^^^^^
+lib/methods.rb:133:25: C: [Correctable] Style/WordArray: Use %w or %W for an array of words.
+  get_object(Route.all, ['маршрута', 'маршрутов'])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:141:30: C: [Correctable] Style/WordArray: Use %w or %W for an array of words.
+  get_object(route.stations, ['станции', 'станций'])
+                             ^^^^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:144:1: C: Metrics/MethodLength: Method has too many lines. [12/10]
+def new_station ...
+^^^^^^^^^^^^^^^
+lib/methods.rb:155:8: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+    end      
+       ^^^^^^
+lib/methods.rb:159:1: C: Metrics/MethodLength: Method has too many lines. [13/10]
+def new_train ...
+^^^^^^^^^^^^^
+lib/methods.rb:163:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    print "Введите номер поезда: "
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:171:8: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+    end   
+       ^^^
+lib/methods.rb:175:1: C: Metrics/AbcSize: Assignment Branch Condition size for new_carriage is too high. [<7, 18, 5> 19.95/17]
+def new_carriage ...
+^^^^^^^^^^^^^^^^
+lib/methods.rb:175:1: C: Metrics/MethodLength: Method has too many lines. [21/10]
+def new_carriage ...
+^^^^^^^^^^^^^^^^
+lib/methods.rb:177:3: C: [Correctable] Style/GuardClause: Use a guard clause (return unless train) instead of wrapping the code inside a conditional expression.
+  if train
+  ^^
+lib/methods.rb:181:13: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      print "Введите вместимость вагона (1..150): "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:188:10: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+      end   
+         ^^^
+lib/methods.rb:199:1: C: Metrics/MethodLength: Method has too many lines. [12/10]
+def delete_carriage ...
+^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:201:3: C: [Correctable] Style/GuardClause: Use a guard clause (return unless train) instead of wrapping the code inside a conditional expression.
+  if train 
+  ^^
+lib/methods.rb:201:11: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+  if train 
+          ^
+lib/methods.rb:203:5: C: [Correctable] Style/GuardClause: Use a guard clause (return unless carriage) instead of wrapping the code inside a conditional expression.
+    if carriage
+    ^^
+lib/methods.rb:206:75: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+        puts "От поезда #{train.number} отцеплен вагон #{carriage.number}" 
+                                                                          ^
+lib/methods.rb:214:1: C: Metrics/AbcSize: Assignment Branch Condition size for load_carriage is too high. [<6, 19, 8> 21.47/17]
+def load_carriage ...
+^^^^^^^^^^^^^^^^^
+lib/methods.rb:214:1: C: Metrics/MethodLength: Method has too many lines. [25/10]
+def load_carriage ...
+^^^^^^^^^^^^^^^^^
+lib/methods.rb:216:3: C: [Correctable] Style/GuardClause: Use a guard clause (return unless train) instead of wrapping the code inside a conditional expression.
+  if train
+  ^^
+lib/methods.rb:218:5: C: [Correctable] Style/GuardClause: Use a guard clause (return unless carriage) instead of wrapping the code inside a conditional expression.
+    if carriage
+    ^^
+lib/methods.rb:219:41: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      title = carriage.type == :cargo ? "объём груза" : "количество пассажиров"
+                                        ^^^^^^^^^^^^^
+lib/methods.rb:219:57: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      title = carriage.type == :cargo ? "объём груза" : "количество пассажиров"
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:228:32: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+            volume.times do |i| 
+                               ^
+lib/methods.rb:244:8: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  puts "Укажите станцию отправления."
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:246:8: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  puts "Укажите станцию назначения."
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/methods.rb:248:3: C: [Correctable] Style/GuardClause: Use a guard clause (return unless first && last) instead of wrapping the code inside a conditional expression.
+  if first && last
+  ^^
+lib/methods.rb:256:3: C: [Correctable] Style/GuardClause: Use a guard clause (return unless route) instead of wrapping the code inside a conditional expression.
+  if route 
+  ^^
+lib/methods.rb:256:3: C: [Correctable] Style/IfUnlessModifier: Favor modifier if usage when having a single-line body. Another good alternative is the usage of control flow &&/||.
+  if route 
+  ^^
+lib/methods.rb:256:11: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+  if route 
+          ^
+lib/methods.rb:263:3: C: [Correctable] Style/GuardClause: Use a guard clause (return unless route) instead of wrapping the code inside a conditional expression.
+  if route 
+  ^^
+lib/methods.rb:263:11: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+  if route 
+          ^
+lib/methods.rb:266:5: C: [Correctable] Style/GuardClause: Use a guard clause (return unless station) instead of wrapping the code inside a conditional expression.
+    if station 
+    ^^
+lib/methods.rb:266:15: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+    if station 
+              ^
+lib/methods.rb:268:72: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+      puts "В маршрут следования #{route} добавлена станция #{station}" 
+                                                                       ^
+lib/methods.rb:275:3: C: [Correctable] Style/GuardClause: Use a guard clause (return unless route) instead of wrapping the code inside a conditional expression.
+  if route 
+  ^^
+lib/methods.rb:275:11: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+  if route 
+          ^
+lib/methods.rb:277:5: C: [Correctable] Style/GuardClause: Use a guard clause (return unless station) instead of wrapping the code inside a conditional expression.
+    if station 
+    ^^
+lib/methods.rb:277:15: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+    if station 
+              ^
+lib/methods.rb:279:72: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+      puts "Из маршрута следования #{route} удалена станция #{station}" 
+                                                                       ^
+lib/methods.rb:286:3: C: [Correctable] Style/GuardClause: Use a guard clause (return unless train) instead of wrapping the code inside a conditional expression.
+  if train 
+  ^^
+lib/methods.rb:286:11: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+  if train 
+          ^
+lib/methods.rb:288:5: C: [Correctable] Style/GuardClause: Use a guard clause (return unless route) instead of wrapping the code inside a conditional expression.
+    if route
+    ^^
+lib/methods.rb:297:3: C: [Correctable] Style/GuardClause: Use a guard clause (return unless train) instead of wrapping the code inside a conditional expression.
+  if train 
+  ^^
+lib/methods.rb:297:11: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+  if train 
+          ^
+lib/methods.rb:308:3: C: [Correctable] Style/GuardClause: Use a guard clause (return unless train) instead of wrapping the code inside a conditional expression.
+  if train 
+  ^^
+lib/methods.rb:308:11: C: [Correctable] Layout/TrailingWhitespace: Trailing whitespace detected.
+  if train 
+          ^
+lib/methods.rb:315:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+end
+   
+lib/passanger_carriage.rb:1:1: C: Style/Documentation: Missing top-level documentation comment for class PassangerCarriage.
+class PassangerCarriage < Carriage
+^^^^^^^^^^^^^^^^^^^^^^^
+lib/passanger_carriage.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class PassangerCarriage < Carriage
+^
+lib/passanger_carriage.rb:10:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+end
+   
+lib/passanger_train.rb:1:1: C: Style/Documentation: Missing top-level documentation comment for class PassangerTrain.
+class PassangerTrain < Train
+^^^^^^^^^^^^^^^^^^^^
+lib/passanger_train.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class PassangerTrain < Train
+^
+lib/passanger_train.rb:6:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+end
+   
+lib/route.rb:1:1: C: Style/Documentation: Missing top-level documentation comment for class Route.
+class Route
+^^^^^^^^^^^
+lib/route.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class Route
+^
+lib/route.rb:27:5: C: [Correctable] Style/GuardClause: Use a guard clause (return "#{to_s} (экспресс, без промежуточных остановок)" if stations.length == 2) instead of wrapping the code inside a conditional expression.
+    if stations.length == 2
+    ^^
+lib/route.rb:28:7: C: [Correctable] Style/RedundantReturn: Redundant return detected.
+      return "#{to_s} (экспресс, без промежуточных остановок)"
+      ^^^^^^
+lib/route.rb:28:17: W: [Correctable] Lint/RedundantStringCoercion: Use self instead of Object#to_s in interpolation.
+      return "#{to_s} (экспресс, без промежуточных остановок)"
+                ^^^^
+lib/route.rb:30:58: C: [Correctable] Style/SymbolProc: Pass &:name as an argument to map instead of a block.
+      names = stations.slice(1, stations.length - 2).map { |st| st.name }
+                                                         ^^^^^^^^^^^^^^^^
+lib/route.rb:31:7: C: [Correctable] Style/RedundantReturn: Redundant return detected.
+      return "#{to_s} (c промежуточными станциями #{names.join(', ')})"
+      ^^^^^^
+lib/route.rb:31:17: W: [Correctable] Lint/RedundantStringCoercion: Use self instead of Object#to_s in interpolation.
+      return "#{to_s} (c промежуточными станциями #{names.join(', ')})"
+                ^^^^
+lib/route.rb:37:19: C: [Correctable] Style/SymbolProc: Pass &:name as an argument to map instead of a block.
+    (stations.map { |st| st.name }).join(', ')
+                  ^^^^^^^^^^^^^^^^
+lib/route.rb:57:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    return nil if self.last?(station)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/route.rb:57:19: C: [Correctable] Style/RedundantSelf: Redundant self detected.
+    return nil if self.last?(station)
+                  ^^^^
+lib/route.rb:58:5: C: [Correctable] Style/RedundantReturn: Redundant return detected.
+    return stations[stations.find_index(station) + 1]
+    ^^^^^^
+lib/route.rb:62:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    return nil if self.first?(station)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/route.rb:62:19: C: [Correctable] Style/RedundantSelf: Redundant self detected.
+    return nil if self.first?(station)
+                  ^^^^
+lib/route.rb:63:5: C: [Correctable] Style/RedundantReturn: Redundant return detected.
+    return stations[stations.find_index(station) - 1]
+    ^^^^^^
+lib/route.rb:65:1: C: [Correctable] Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body end.
+lib/route.rb:66:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+end
+   
+lib/station.rb:1:1: C: Style/Documentation: Missing top-level documentation comment for class Station.
+class Station
+^^^^^^^^^^^^^
+lib/station.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+class Station
+^
+lib/station.rb:4:17: C: [Correctable] Style/MutableConstant: Freeze mutable objects assigned to constants.
+  NAME_FORMAT = /^[а-я\d]{1}[а-я \d-]{1,48}[а-я\d]{1}$/i
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/station.rb:10:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    raise "Название станции несоответствует устновленному формату." if !valid?
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/station.rb:10:5: C: [Correctable] Style/NegatedIf: Favor unless over if for negative conditions.
+    raise "Название станции несоответствует устновленному формату." if !valid?
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/station.rb:10:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    raise "Название станции несоответствует устновленному формату." if !valid?
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/station.rb:25:5: C: [Correctable] Style/RedundantSelf: Redundant self detected.
+    self.trains << train
+    ^^^^
+lib/station.rb:26:5: C: [Correctable] Style/RedundantReturn: Redundant return detected.
+    return "Внимание! На станцию #{name} прибыл #{train}"
+    ^^^^^^
+lib/station.rb:32:5: C: [Correctable] Style/RedundantReturn: Redundant return detected.
+    return "Внимание! Со станции #{name} отправляется #{train}"
+    ^^^^^^
+lib/station.rb:42:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+end
+   
+lib/train.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+require_relative 'methods'
+^
+lib/train.rb:3:1: C: Style/Documentation: Missing top-level documentation comment for class Train.
+class Train
+^^^^^^^^^^^
+lib/train.rb:7:19: C: [Correctable] Style/MutableConstant: Freeze mutable objects assigned to constants.
+  NUMBER_FORMAT = /^[а-я\d]{3}-*[а-я\d]{2}$/i
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:18:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    raise "Номер поезда несоответствует устновленному формату." if !valid?
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:18:5: C: [Correctable] Style/NegatedIf: Favor unless over if for negative conditions.
+    raise "Номер поезда несоответствует устновленному формату." if !valid?
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:18:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    raise "Номер поезда несоответствует устновленному формату." if !valid?
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:44:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    raise "Неверный тип вагона" if type != carriage.type
+          ^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:45:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    raise "Нельзя прицеплять вагоны на ходу" if (speed != 0)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:45:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    raise "Нельзя прицеплять вагоны на ходу" if (speed != 0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:45:49: C: [Correctable] Style/ParenthesesAroundCondition: Don't use parentheses around the condition of an if.
+    raise "Нельзя прицеплять вагоны на ходу" if (speed != 0)
+                                                ^^^^^^^^^^^^
+lib/train.rb:47:5: C: [Correctable] Style/RedundantReturn: Redundant return detected.
+    return length
+    ^^^^^^
+lib/train.rb:52:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    raise "Нельзя отцеплять вагоны на ходу" if (speed != 0)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:52:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    raise "Нельзя отцеплять вагоны на ходу" if (speed != 0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:52:48: C: [Correctable] Style/ParenthesesAroundCondition: Don't use parentheses around the condition of an if.
+    raise "Нельзя отцеплять вагоны на ходу" if (speed != 0)
+                                               ^^^^^^^^^^^^
+lib/train.rb:54:5: C: [Correctable] Style/RedundantReturn: Redundant return detected.
+    return length
+    ^^^^^^
+lib/train.rb:57:7: C: Naming/AccessorMethodName: Do not prefix writer method names with set_.
+  def set_route(route)
+      ^^^^^^^^^
+lib/train.rb:68:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    return nil if route.nil?
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:73:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    return nil if route.nil?
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:79:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    raise "Поезду не назначен маршрут" if route.nil?
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:80:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    raise "Поезд уже на конечной станции маршрута" if route.last?(station)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:80:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    raise "Поезд уже на конечной станции маршрута" if route.last?(station)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:83:5: C: [Correctable] Style/StringConcatenation: Prefer string interpolation to string concatenation.
+    result + "\n" + station.take(self)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:88:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    raise "Поезду не назначен маршрут" if route.nil?
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:89:5: C: [Correctable] Layout/EmptyLineAfterGuardClause: Add empty line after guard clause.
+    raise "Поезд уже на начальной станции маршрута" if route.first?(station)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:89:11: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    raise "Поезд уже на начальной станции маршрута" if route.first?(station)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:92:5: C: [Correctable] Style/StringConcatenation: Prefer string interpolation to string concatenation.
+    result + "\n" + station.take(self)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:96:59: C: [Correctable] Style/RedundantSelf: Redundant self detected.
+    "#{Train.types[type]} поезд №#{number} (#{get_numeric(self.length, ['вагон', 'вагона', 'вагонов'])})"
+                                                          ^^^^
+lib/train.rb:96:72: C: [Correctable] Style/WordArray: Use %w or %W for an array of words.
+    "#{Train.types[type]} поезд №#{number} (#{get_numeric(self.length, ['вагон', 'вагона', 'вагонов'])})"
+                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+lib/train.rb:103:1: C: [Correctable] Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body end.
+lib/train.rb:104:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+end
+   
+lib/vehicle.rb:1:1: C: Style/Documentation: Missing top-level documentation comment for module Vehicle.
+module Vehicle
+^^^^^^^^^^^^^^
+lib/vehicle.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+module Vehicle
+^
+lib/vehicle.rb:5:5: C: [Correctable] Style/EvalWithLocation: Pass __FILE__ and __LINE__ to class_eval.
+    base.class_eval %( ...
+    ^^^^^^^^^^^^^^^^^^
+lib/vehicle.rb:9:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
+end
+   
+main.rb:14:38: F: Lint/Syntax: unexpected token tLCURLY
+(Using Ruby 2.7 parser; configure using TargetRubyVersion parameter, under AllCops)
+      sub_menu.item 'Список станций' { run(:show_stations) }
+                                     ^
+main.rb:14:60: F: Lint/Syntax: unexpected token tRCURLY
+(Using Ruby 2.7 parser; configure using TargetRubyVersion parameter, under AllCops)
+      sub_menu.item 'Список станций' { run(:show_stations) }
+                                                           ^
+main.rb:20:3: F: Lint/Syntax: unexpected token kEND
+(Using Ruby 2.7 parser; configure using TargetRubyVersion parameter, under AllCops)
+  end
+  ^^^
+test.rb:1:1: C: [Correctable] Style/BlockComments: Do not use block comments.
+=begin ...
+^^^^^^
+test.rb:1:1: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+=begin
+^
+test.rb:9:1: W: [Correctable] Lint/NonDeterministicRequireOrder: Sort files before requiring them.
+Dir['lib/*.rb'].each { |file| require_relative file }
+^^^^^^^^^^^^^^^^^^^^
+test.rb:11:1: C: [Correctable] Layout/LeadingCommentSpace: Missing space after #.
+#puts Train.types.inspect
+^^^^^^^^^^^^^^^^^^^^^^^^^
+test.rb:15:13: W: [Correctable] Lint/UnusedBlockArgument: Unused block argument - i. You can omit the argument if you don't care about it.
+43.times { |i| train1.attach(CargoCarriage.new(Carriage.random_number))}
+            ^
+test.rb:15:72: C: [Correctable] Layout/SpaceInsideBlockBraces: Space missing inside }.
+43.times { |i| train1.attach(CargoCarriage.new(Carriage.random_number))}
+                                                                       ^
+test.rb:17:13: W: [Correctable] Lint/UnusedBlockArgument: Unused block argument - i. You can omit the argument if you don't care about it.
+12.times { |i| train2.attach(PassangerCarriage.new(Carriage.random_number))}
+            ^
+test.rb:17:76: C: [Correctable] Layout/SpaceInsideBlockBraces: Space missing inside }.
+12.times { |i| train2.attach(PassangerCarriage.new(Carriage.random_number))}
+                                                                           ^
+test.rb:19:13: W: [Correctable] Lint/UnusedBlockArgument: Unused block argument - i. You can omit the argument if you don't care about it.
+55.times { |i| train3.attach(CargoCarriage.new(Carriage.random_number))}
+            ^
+test.rb:19:72: C: [Correctable] Layout/SpaceInsideBlockBraces: Space missing inside }.
+55.times { |i| train3.attach(CargoCarriage.new(Carriage.random_number))}
+                                                                       ^
+test.rb:21:13: W: [Correctable] Lint/UnusedBlockArgument: Unused block argument - i. You can omit the argument if you don't care about it.
+10.times { |i| train4.attach(PassangerCarriage.new(Carriage.random_number))}
+            ^
+test.rb:21:76: C: [Correctable] Layout/SpaceInsideBlockBraces: Space missing inside }.
+10.times { |i| train4.attach(PassangerCarriage.new(Carriage.random_number))}
+                                                                           ^
+test.rb:54:3: C: [Correctable] Style/RedundantBegin: Redundant begin block detected.
+  begin
+  ^^^^^
+
+13 files inspected, 209 offenses detected, 176 offenses autocorrectable
